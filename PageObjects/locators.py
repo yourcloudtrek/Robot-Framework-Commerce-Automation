@@ -44,12 +44,15 @@ notebook_banner = "xpath://div[@class='page-title']"
 
 # page objects of apperals and shoes page
 add_cart_apperal_shoes = "xpath:(//input[@value='Add to cart'])[1]"
+click_frok_image = "xpath://a[contains(text(),'Rockabilly Polka Dot Top')]"
+add_to_wishlist = "xpath://input[@id='add-to-wishlist-button-5']"
 
 # page objects of digital downloads
 add_cart_music_digitaldownloads = "xpath:(//input[@value='Add to cart'])[2]"
 
 # header links
 shopping_cart_link = "xpath://a[text()='shopping cart']"
+wish_list_link= "xpath://a[text()='wishlist']"
 
 # page objects of shopping cart
 shopping_cart_banner = "xpath://h1[text()='Shopping cart']"

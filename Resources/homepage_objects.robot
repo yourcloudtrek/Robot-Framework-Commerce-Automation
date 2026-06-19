@@ -7,8 +7,7 @@ Variables    ../PageObjects/locators.py
    
 CLick Register link
     Wait Until Element Is Visible       ${register_link}    10s
-    Click Element    ${register_link}
-    
+    Click Element    ${register_link}    
 
 Enter Newsletter Email and validate
     Wait Until Element Is Visible    ${newsletter_email}    10s

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.12.8 on win32)" generated="2026-06-19T20:55:46.957910" rpa="false" schemaversion="5">
+<suite id="s1" name="Add Item Wishlist" source="G:\Robot Framework Commerce Automation\TestCases\add_item_wishlist.robot">
+<test id="s1-t1" name="11_Validate wishlist" line="10">
+<kw name="Launch browser and launch application" owner="common_keywords">
+<kw name="Load Json From File" owner="JSONLibrary">
+<msg time="2026-06-19T20:55:49.515397" level="INFO">${data} = {'url': 'https://demowebshop.tricentis.com/', 'registration': {'first_name': 'Ram', 'last_name': 'Chig', 'email': 'rc2@robot.com', 'password': 'testme123'}, 'giftcard': {'recipient_name': 'John', 'rec...</msg>
+<var>${data}</var>
+<arg>G:\\Robot Framework Commerce Automation\\Utilities\\testdata.json</arg>
+<doc>Load JSON from file.</doc>
+<status status="PASS" start="2026-06-19T20:55:49.508030" elapsed="0.007367"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-19T20:55:49.560177" level="INFO">${url} = https://demowebshop.tricentis.com/</msg>
+<var>${url}</var>
+<arg>${data}[url]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-19T20:55:49.559179" elapsed="0.000998"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-06-19T20:55:49.573170" level="INFO">Opening browser 'Chrome' to base url 'https://demowebshop.tricentis.com/'.</msg>
+<arg>${url}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-06-19T20:55:49.572169" elapsed="13.165631"/>
+</kw>
+<kw name="Delete All Cookies" owner="SeleniumLibrary">
+<doc>Deletes all cookies.</doc>
+<status status="PASS" start="2026-06-19T20:56:02.738800" elapsed="1.707559"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-06-19T20:56:04.446359" elapsed="0.099702"/>
+</kw>
+<status status="PASS" start="2026-06-19T20:55:49.489526" elapsed="15.056535"/>
+</kw>
+<kw name="Add apperals and other items to wishlist" owner="apperals_shoes_page_objects">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${apperal_shoes}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T20:56:04.564676" elapsed="0.222620"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-06-19T20:56:04.787296" level="INFO">Clicking element 'xpath:(//a[contains(text(),'Apparel &amp; Shoes')])[1]'.</msg>
+<arg>${apperal_shoes}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-19T20:56:04.787296" elapsed="1.391290"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${click_frok_image}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T20:56:06.180582" elapsed="0.043407"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-06-19T20:56:06.224988" level="INFO">Clicking element 'xpath://a[contains(text(),'Rockabilly Polka Dot Top')]'.</msg>
+<arg>${click_frok_image}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-19T20:56:06.224988" elapsed="1.843166"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${add_to_wishlist}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T20:56:08.069154" elapsed="0.058156"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-06-19T20:56:08.127310" level="INFO">Clicking button 'xpath://input[@id='add-to-wishlist-button-5']'.</msg>
+<arg>${add_to_wishlist}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-19T20:56:08.127310" elapsed="0.226171"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${wish_list_link}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T20:56:08.353481" elapsed="0.297974"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2026-06-19T20:56:08.652448" level="INFO">Clicking link 'xpath://a[text()='wishlist']'.</msg>
+<arg>${wish_list_link}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-19T20:56:08.652448" elapsed="0.762152"/>
+</kw>
+<status status="PASS" start="2026-06-19T20:56:04.561686" elapsed="4.852914"/>
+</kw>
+<kw name="Validate Wishlist title" owner="wishlist_cart_page_objects">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath://div[@class='page-title']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-06-19T20:56:09.430283" elapsed="0.068060"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2026-06-19T20:56:09.531579" level="INFO">Page title is 'Demo Web Shop. Wishlist'.</msg>
+<arg>Demo Web Shop. Wishlist</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2026-06-19T20:56:09.498343" elapsed="0.034235"/>
+</kw>
+<status status="PASS" start="2026-06-19T20:56:09.430283" elapsed="0.102295"/>
+</kw>
+<kw name="Close the browsering session" owner="common_keywords">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-06-19T20:56:09.535574" elapsed="3.016076"/>
+</kw>
+<status status="PASS" start="2026-06-19T20:56:09.534576" elapsed="3.017074"/>
+</kw>
+<status status="PASS" start="2026-06-19T20:55:49.489526" elapsed="23.062124"/>
+</test>
+<status status="PASS" start="2026-06-19T20:55:46.959922" elapsed="25.591728"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Add Item Wishlist" id="s1" pass="1" fail="0" skip="0">Add Item Wishlist</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
