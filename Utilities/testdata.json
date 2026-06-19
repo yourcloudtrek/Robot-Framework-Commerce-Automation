@@ -1,0 +1,22 @@
+{
+    "url":"https://demowebshop.tricentis.com/",
+
+    "registration" :
+    {
+        "first_name" : "Ram",
+        "last_name" : "Chig",
+        "email" : "rc2@robot.com",
+        "password" : "testme123"
+
+    },
+
+    "giftcard" :
+    {
+        "recipient_name" : "John",
+        "recipient_mail" : "john@gc.com",
+        "sender_name" : "Krish",
+        "sender_email" : "krish@gc.com"
+    }
+
+
+}
