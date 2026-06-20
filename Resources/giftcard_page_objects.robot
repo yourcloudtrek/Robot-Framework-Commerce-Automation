@@ -6,7 +6,7 @@ Library    JSONLibrary
 
 *** Keywords ***
 Add Giftcard to the cart
-    ${test_data} =     Load Json From File    G:\\Robot Framework Commerce Automation\\Utilities\\testdata.json
+    ${test_data} =     Load Json From File    Utilities/testdata.json
     ${rec_name} =     Set Variable    ${test_data}[giftcard][recipient_name]
     ${rec_email} =     Set Variable    ${test_data}[giftcard][recipient_mail]
     ${sender_n} =    Set Variable    ${test_data}[giftcard][sender_name]

@@ -28,7 +28,7 @@ jobs:
           pip install robotframework-seleniumlibrary
           pip install selenium
           pip install robotframework-jsonlibrary
-          pip install robotframework-metrics
+          
 
       - name: Run Robot Test
         run: |
@@ -36,5 +36,3 @@ jobs:
           robot TestCases/add_giftcard_cart.robot   
           
     
-
-      -      
