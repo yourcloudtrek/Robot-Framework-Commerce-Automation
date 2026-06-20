@@ -6,7 +6,7 @@ Variables    ../PageObjects/locators.py
 
 *** Variables ***
 
-${test_data_file_path}     G:\\Robot Framework Commerce Automation\\Utilities\\testdata.json
+${test_data_file_path}     Utilities/testdata.json
     
 
 *** Keywords ***

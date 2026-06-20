@@ -7,7 +7,7 @@ Library    JSONLibrary
 *** Keywords ***
 Register the use sucessfully and validate
 
-    ${json_data} =    Load Json From File    G:\\Robot Framework Commerce Automation\\Utilities\\testdata.json
+    ${json_data} =    Load Json From File    Utilities/testdata.json
 
     ${first_name_data}=    Set Variable    ${json_data}[registration][first_name]
     ${last_name_data}=     Set Variable    ${json_data}[registration][last_name]

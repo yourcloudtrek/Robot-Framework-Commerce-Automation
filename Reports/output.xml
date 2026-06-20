@@ -1,65 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.2 (Python 3.12.8 on win32)" generated="2026-06-20T07:09:36.360570" rpa="false" schemaversion="5">
+<robot generator="Robot 7.4.2 (Python 3.12.8 on win32)" generated="2026-06-20T07:55:03.843062" rpa="false" schemaversion="5">
 <suite id="s1" name="Register New User" source="G:\Robot Framework Commerce Automation\TestCases\register_new_user.robot">
 <test id="s1-t1" name="1_Register a new user" line="10">
 <kw name="Launch browser and launch application" owner="common_keywords">
 <kw name="Load Json From File" owner="JSONLibrary">
-<msg time="2026-06-20T07:09:37.403693" level="INFO">${lambda_test_details} = {'lambda_test': {'user_name_lt': 'yourcloudtrek', 'access_key_lt': 'LT_DiVo0Qqh1FfEPPjKoOr6qeOMPMagES0tdRcnSp78JLBoSog'}, 'url': 'https://demowebshop.tricentis.com/', 'registration': {'first_name': 'R...</msg>
+<msg time="2026-06-20T07:55:05.057364" level="INFO">${lambda_test_details} = {'lambda_test': {'user_name_lt': 'yourcloudtrek', 'access_key_lt': 'LT_DiVo0Qqh1FfEPPjKoOr6qeOMPMagES0tdRcnSp78JLBoSog'}, 'url': 'https://demowebshop.tricentis.com/', 'registration': {'first_name': 'R...</msg>
 <var>${lambda_test_details}</var>
 <arg>${test_data_file_path}</arg>
 <doc>Load JSON from file.</doc>
-<status status="PASS" start="2026-06-20T07:09:37.403693" elapsed="0.000000"/>
+<status status="PASS" start="2026-06-20T07:55:05.041735" elapsed="0.015629"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-06-20T07:09:37.403693" level="INFO">${lt_username} = yourcloudtrek</msg>
+<msg time="2026-06-20T07:55:05.059706" level="INFO">${lt_username} = yourcloudtrek</msg>
 <var>${lt_username}</var>
 <arg>${lambda_test_details}[lambda_test][user_name_lt]</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-06-20T07:09:37.403693" elapsed="0.000000"/>
+<status status="PASS" start="2026-06-20T07:55:05.058705" elapsed="0.001001"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-06-20T07:09:37.403693" level="INFO">${lt_accesskey} = LT_DiVo0Qqh1FfEPPjKoOr6qeOMPMagES0tdRcnSp78JLBoSog</msg>
+<msg time="2026-06-20T07:55:05.061816" level="INFO">${lt_accesskey} = LT_DiVo0Qqh1FfEPPjKoOr6qeOMPMagES0tdRcnSp78JLBoSog</msg>
 <var>${lt_accesskey}</var>
 <arg>${lambda_test_details}[lambda_test][access_key_lt]</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-06-20T07:09:37.403693" elapsed="0.000000"/>
+<status status="PASS" start="2026-06-20T07:55:05.061480" elapsed="0.000336"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-06-20T07:09:37.403693" level="INFO">${remote_rul} = https://yourcloudtrek:LT_DiVo0Qqh1FfEPPjKoOr6qeOMPMagES0tdRcnSp78JLBoSog@hub.lambdatest.com/wd/hub</msg>
+<msg time="2026-06-20T07:55:05.063817" level="INFO">${remote_rul} = https://yourcloudtrek:LT_DiVo0Qqh1FfEPPjKoOr6qeOMPMagES0tdRcnSp78JLBoSog@hub.lambdatest.com/wd/hub</msg>
 <var>${remote_rul}</var>
 <arg>https://${lt_username}:${lt_accesskey}@hub.lambdatest.com/wd/hub</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-06-20T07:09:37.403693" elapsed="0.000000"/>
+<status status="PASS" start="2026-06-20T07:55:05.062820" elapsed="0.000997"/>
 </kw>
 <kw name="Load Json From File" owner="JSONLibrary">
-<msg time="2026-06-20T07:09:37.403693" level="INFO">${data} = {'lambda_test': {'user_name_lt': 'yourcloudtrek', 'access_key_lt': 'LT_DiVo0Qqh1FfEPPjKoOr6qeOMPMagES0tdRcnSp78JLBoSog'}, 'url': 'https://demowebshop.tricentis.com/', 'registration': {'first_name': 'R...</msg>
+<msg time="2026-06-20T07:55:05.064816" level="INFO">${data} = {'lambda_test': {'user_name_lt': 'yourcloudtrek', 'access_key_lt': 'LT_DiVo0Qqh1FfEPPjKoOr6qeOMPMagES0tdRcnSp78JLBoSog'}, 'url': 'https://demowebshop.tricentis.com/', 'registration': {'first_name': 'R...</msg>
 <var>${data}</var>
 <arg>${test_data_file_path}</arg>
 <doc>Load JSON from file.</doc>
-<status status="PASS" start="2026-06-20T07:09:37.403693" elapsed="0.000000"/>
+<status status="PASS" start="2026-06-20T07:55:05.063817" elapsed="0.001999"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-06-20T07:09:37.403693" level="INFO">${url} = https://demowebshop.tricentis.com/</msg>
+<msg time="2026-06-20T07:55:05.066816" level="INFO">${url} = https://demowebshop.tricentis.com/</msg>
 <var>${url}</var>
 <arg>${data}[url]</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-06-20T07:09:37.403693" elapsed="0.000000"/>
+<status status="PASS" start="2026-06-20T07:55:05.065816" elapsed="0.001000"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2026-06-20T07:09:37.420748" level="INFO">${options} = &lt;selenium.webdriver.firefox.options.Options object at 0x000001D16B896030&gt;</msg>
+<msg time="2026-06-20T07:55:05.068472" level="INFO">${options} = &lt;selenium.webdriver.firefox.options.Options object at 0x00000186DFAE7FE0&gt;</msg>
 <var>${options}</var>
 <arg>sys.modules['selenium.webdriver'].FirefoxOptions()</arg>
 <arg>sys, selenium.webdriver</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2026-06-20T07:09:37.403693" elapsed="0.017055"/>
+<status status="PASS" start="2026-06-20T07:55:05.068472" elapsed="0.000000"/>
 </kw>
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2026-06-20T07:09:37.423036" level="INFO">${lt_options} = {'build': 'commerce_1_FF', 'name': 'register_user'}</msg>
+<msg time="2026-06-20T07:55:05.078624" level="INFO">${lt_options} = {'build': 'commerce_1_FF', 'name': 'register_user'}</msg>
 <var>${lt_options}</var>
 <arg>build=commerce_1_FF</arg>
 <arg>name=register_user</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2026-06-20T07:09:37.423036" elapsed="0.000000"/>
+<status status="PASS" start="2026-06-20T07:55:05.078624" elapsed="0.000000"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
@@ -67,151 +67,151 @@
 <arg>LT:Options</arg>
 <arg>${lt_options}</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2026-06-20T07:09:37.423036" elapsed="0.001476"/>
+<status status="PASS" start="2026-06-20T07:55:05.078624" elapsed="0.000000"/>
 </kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-06-20T07:09:37.424512" level="INFO">Opening browser 'Firefox' to base url 'https://demowebshop.tricentis.com/' through remote server at 'https://yourcloudtrek:LT_DiVo0Qqh1FfEPPjKoOr6qeOMPMagES0tdRcnSp78JLBoSog@hub.lambdatest.com/wd/hub'.</msg>
-<msg time="2026-06-20T07:09:50.785991" level="INFO">C:\Users\Lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\remote_connection.py:421: UserWarning: Embedding username and password in URL could be insecure, use ClientConfig instead
+<msg time="2026-06-20T07:55:05.078624" level="INFO">Opening browser 'Firefox' to base url 'https://demowebshop.tricentis.com/' through remote server at 'https://yourcloudtrek:LT_DiVo0Qqh1FfEPPjKoOr6qeOMPMagES0tdRcnSp78JLBoSog@hub.lambdatest.com/wd/hub'.</msg>
+<msg time="2026-06-20T07:55:15.704954" level="INFO">C:\Users\Lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\remote_connection.py:421: UserWarning: Embedding username and password in URL could be insecure, use ClientConfig instead
   headers = self.get_remote_connection_headers(parsed_url, self._client_config.keep_alive)</msg>
 <arg>${url}</arg>
 <arg>Firefox</arg>
 <arg>remote_url=${remote_rul}</arg>
 <arg>options=${options}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-06-20T07:09:37.424512" elapsed="13.361479"/>
+<status status="PASS" start="2026-06-20T07:55:05.078624" elapsed="10.626330"/>
 </kw>
 <kw name="Delete All Cookies" owner="SeleniumLibrary">
 <doc>Deletes all cookies.</doc>
-<status status="PASS" start="2026-06-20T07:09:50.785991" elapsed="0.261675"/>
+<status status="PASS" start="2026-06-20T07:55:15.704954" elapsed="0.270027"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-06-20T07:09:51.047666" elapsed="0.585811"/>
+<status status="PASS" start="2026-06-20T07:55:15.974981" elapsed="0.747445"/>
 </kw>
-<status status="PASS" start="2026-06-20T07:09:37.403693" elapsed="14.229784"/>
+<status status="PASS" start="2026-06-20T07:55:05.041735" elapsed="11.680691"/>
 </kw>
 <kw name="CLick Register link" owner="homepage_objects">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${register_link}</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-06-20T07:09:51.633477" elapsed="0.546300"/>
+<status status="PASS" start="2026-06-20T07:55:16.735938" elapsed="0.576723"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-06-20T07:09:52.179777" level="INFO">Clicking element 'xpath://a[text()='Register']'.</msg>
+<msg time="2026-06-20T07:55:17.313660" level="INFO">Clicking element 'xpath://a[text()='Register']'.</msg>
 <arg>${register_link}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-20T07:09:52.179777" elapsed="0.847119"/>
+<status status="PASS" start="2026-06-20T07:55:17.312661" elapsed="0.961804"/>
 </kw>
-<status status="PASS" start="2026-06-20T07:09:51.633477" elapsed="1.393419"/>
+<status status="PASS" start="2026-06-20T07:55:16.734939" elapsed="1.540526"/>
 </kw>
 <kw name="Register the use sucessfully and validate" owner="registrationpage_objects">
 <kw name="Load Json From File" owner="JSONLibrary">
-<msg time="2026-06-20T07:09:53.026896" level="INFO">${json_data} = {'lambda_test': {'user_name_lt': 'yourcloudtrek', 'access_key_lt': 'LT_DiVo0Qqh1FfEPPjKoOr6qeOMPMagES0tdRcnSp78JLBoSog'}, 'url': 'https://demowebshop.tricentis.com/', 'registration': {'first_name': 'R...</msg>
+<msg time="2026-06-20T07:55:18.282452" level="INFO">${json_data} = {'lambda_test': {'user_name_lt': 'yourcloudtrek', 'access_key_lt': 'LT_DiVo0Qqh1FfEPPjKoOr6qeOMPMagES0tdRcnSp78JLBoSog'}, 'url': 'https://demowebshop.tricentis.com/', 'registration': {'first_name': 'R...</msg>
 <var>${json_data}</var>
-<arg>G:\\Robot Framework Commerce Automation\\Utilities\\testdata.json</arg>
+<arg>Utilities/testdata.json</arg>
 <doc>Load JSON from file.</doc>
-<status status="PASS" start="2026-06-20T07:09:53.026896" elapsed="0.000000"/>
+<status status="PASS" start="2026-06-20T07:55:18.281453" elapsed="0.001998"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-06-20T07:09:53.042519" level="INFO">${first_name_data} = Ram</msg>
+<msg time="2026-06-20T07:55:18.285450" level="INFO">${first_name_data} = Ram</msg>
 <var>${first_name_data}</var>
 <arg>${json_data}[registration][first_name]</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-06-20T07:09:53.042519" elapsed="0.000000"/>
+<status status="PASS" start="2026-06-20T07:55:18.283451" elapsed="0.001999"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-06-20T07:09:53.042519" level="INFO">${last_name_data} = Chig</msg>
+<msg time="2026-06-20T07:55:18.288448" level="INFO">${last_name_data} = Chig</msg>
 <var>${last_name_data}</var>
 <arg>${json_data}[registration][last_name]</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-06-20T07:09:53.042519" elapsed="0.000000"/>
+<status status="PASS" start="2026-06-20T07:55:18.285450" elapsed="0.002998"/>
 </kw>
 <kw name="Generate Email" owner="reusables">
-<msg time="2026-06-20T07:09:53.042519" level="INFO">${email_data} = ram3142@robot.com</msg>
+<msg time="2026-06-20T07:55:18.290447" level="INFO">${email_data} = ram8338@robot.com</msg>
 <var>${email_data}</var>
-<status status="PASS" start="2026-06-20T07:09:53.042519" elapsed="0.000000"/>
+<status status="PASS" start="2026-06-20T07:55:18.289462" elapsed="0.000985"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-06-20T07:09:53.042519" level="INFO">${password_data} = testme123</msg>
+<msg time="2026-06-20T07:55:18.291448" level="INFO">${password_data} = testme123</msg>
 <var>${password_data}</var>
 <arg>${json_data}[registration][password]</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-06-20T07:09:53.042519" elapsed="0.000000"/>
+<status status="PASS" start="2026-06-20T07:55:18.290447" elapsed="0.002002"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${register_banner}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-06-20T07:09:53.042519" elapsed="0.540193"/>
+<status status="PASS" start="2026-06-20T07:55:18.292449" elapsed="0.924381"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-06-20T07:09:53.582712" level="INFO">Clicking element 'xpath://input[@id='gender-male']'.</msg>
+<msg time="2026-06-20T07:55:19.218019" level="INFO">Clicking element 'xpath://input[@id='gender-male']'.</msg>
 <arg>${gender_radio}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-20T07:09:53.582712" elapsed="0.587219"/>
+<status status="PASS" start="2026-06-20T07:55:19.217805" elapsed="0.607590"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-06-20T07:09:54.169931" level="INFO">Typing text 'Ram' into text field 'id:FirstName'.</msg>
+<msg time="2026-06-20T07:55:19.827314" level="INFO">Typing text 'Ram' into text field 'id:FirstName'.</msg>
 <arg>${first_name}</arg>
 <arg>${first_name_data}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-20T07:09:54.169931" elapsed="0.788142"/>
+<status status="PASS" start="2026-06-20T07:55:19.826338" elapsed="0.815085"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-06-20T07:09:54.958073" level="INFO">Typing text 'Chig' into text field 'id:LastName'.</msg>
+<msg time="2026-06-20T07:55:20.642572" level="INFO">Typing text 'Chig' into text field 'id:LastName'.</msg>
 <arg>${last_name}</arg>
 <arg>${last_name_data}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-20T07:09:54.958073" elapsed="0.801855"/>
+<status status="PASS" start="2026-06-20T07:55:20.641423" elapsed="0.820938"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-06-20T07:09:55.759928" level="INFO">Typing text 'ram3142@robot.com' into text field 'id:Email'.</msg>
+<msg time="2026-06-20T07:55:21.463362" level="INFO">Typing text 'ram8338@robot.com' into text field 'id:Email'.</msg>
 <arg>${email}</arg>
 <arg>${email_data}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-20T07:09:55.759928" elapsed="0.790340"/>
+<status status="PASS" start="2026-06-20T07:55:21.463362" elapsed="0.826592"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2026-06-20T07:09:56.550268" level="INFO">Typing password into text field 'id:Password'.</msg>
-<msg time="2026-06-20T07:09:57.075736" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2026-06-20T07:55:22.290954" level="INFO">Typing password into text field 'id:Password'.</msg>
+<msg time="2026-06-20T07:55:22.826890" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>${password}</arg>
 <arg>${password_data}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-20T07:09:56.550268" elapsed="0.813383"/>
+<status status="PASS" start="2026-06-20T07:55:22.289954" elapsed="0.823531"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2026-06-20T07:09:57.363651" level="INFO">Typing password into text field 'id:ConfirmPassword'.</msg>
-<msg time="2026-06-20T07:09:57.880920" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2026-06-20T07:55:23.113485" level="INFO">Typing password into text field 'id:ConfirmPassword'.</msg>
+<msg time="2026-06-20T07:55:23.638802" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>${confirm_password}</arg>
 <arg>${password_data}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-20T07:09:57.363651" elapsed="0.789827"/>
+<status status="PASS" start="2026-06-20T07:55:23.113485" elapsed="0.805732"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2026-06-20T07:09:58.153478" level="INFO">Clicking button 'id:register-button'.</msg>
+<msg time="2026-06-20T07:55:23.921226" level="INFO">Clicking button 'id:register-button'.</msg>
 <arg>${register_button}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-20T07:09:58.153478" elapsed="1.408493"/>
+<status status="PASS" start="2026-06-20T07:55:23.920216" elapsed="1.533988"/>
 </kw>
 <kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2026-06-20T07:10:00.110018" level="INFO">Element 'xpath://div[@class='page-body']' contains text 'registration completed'.</msg>
+<msg time="2026-06-20T07:55:25.988154" level="INFO">Element 'xpath://div[@class='page-body']' contains text 'registration completed'.</msg>
 <arg>${confirmation_message}</arg>
 <arg>registration completed</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2026-06-20T07:09:59.561971" elapsed="0.548047"/>
+<status status="PASS" start="2026-06-20T07:55:25.455254" elapsed="0.532900"/>
 </kw>
-<status status="PASS" start="2026-06-20T07:09:53.026896" elapsed="7.083122"/>
+<status status="PASS" start="2026-06-20T07:55:18.280452" elapsed="7.707702"/>
 </kw>
 <kw name="Close the browsering session" owner="common_keywords">
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2026-06-20T07:10:00.110018" elapsed="0.827409"/>
+<status status="PASS" start="2026-06-20T07:55:25.990154" elapsed="0.846896"/>
 </kw>
-<status status="PASS" start="2026-06-20T07:10:00.110018" elapsed="0.827409"/>
+<status status="PASS" start="2026-06-20T07:55:25.989154" elapsed="0.847896"/>
 </kw>
-<status status="PASS" start="2026-06-20T07:09:37.403693" elapsed="23.533734"/>
+<status status="PASS" start="2026-06-20T07:55:05.041735" elapsed="21.796976"/>
 </test>
-<status status="PASS" start="2026-06-20T07:09:36.362678" elapsed="24.574749"/>
+<status status="PASS" start="2026-06-20T07:55:03.849637" elapsed="22.990278"/>
 </suite>
 <statistics>
 <total>
