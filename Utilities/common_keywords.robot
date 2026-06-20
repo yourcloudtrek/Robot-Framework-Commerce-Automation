@@ -25,7 +25,7 @@ Launch browser and launch application
 
     ${lt_options} =     Create Dictionary     
     ...    build=commerce_1_FF
-    ...    name=register_user
+    ...    name=commerce-project
 
     Call Method    ${options}    set_capability    LT:Options    ${lt_options}               
 

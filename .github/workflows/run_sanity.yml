@@ -31,7 +31,7 @@ jobs:
 
       - name: Run Robot Test
         run: |
-          robot -d Test_Report TestCases/add_books_cart.robot   
+          robot --outputdir Test_Report TestCases/add_books_cart.robot   
           
     
 
