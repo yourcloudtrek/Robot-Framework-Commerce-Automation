@@ -28,6 +28,7 @@ jobs:
           pip install robotframework-seleniumlibrary
           pip install selenium
           pip install robotframework-jsonlibrary
+          pip install robotframework-metrics
 
       - name: Run Robot Test
         run: |
@@ -36,6 +37,5 @@ jobs:
     
 
       - name: Generate RobotMetrics Report
-        run: |
-          pip install robotframework-metrics
+        run: |          
           robotmetrics -I Test_Report/output.xml          
