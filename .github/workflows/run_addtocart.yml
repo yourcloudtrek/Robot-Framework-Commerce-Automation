@@ -10,7 +10,7 @@ jobs:
 
     env:
       LT_USERNAME: ${{ secrets.LT_USERNAME }}
-      LT_ACCESS_KEY: ${{ secrets.LT_ACCESS_KEY }}
+      LT_ACCESSKEY: ${{ secrets.LT_ACCESSKEY }}
 
     steps:
 
