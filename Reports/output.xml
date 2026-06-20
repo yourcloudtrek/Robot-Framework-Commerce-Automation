@@ -1,110 +1,217 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.2 (Python 3.12.8 on win32)" generated="2026-06-19T20:55:46.957910" rpa="false" schemaversion="5">
-<suite id="s1" name="Add Item Wishlist" source="G:\Robot Framework Commerce Automation\TestCases\add_item_wishlist.robot">
-<test id="s1-t1" name="11_Validate wishlist" line="10">
+<robot generator="Robot 7.4.2 (Python 3.12.8 on win32)" generated="2026-06-20T07:09:36.360570" rpa="false" schemaversion="5">
+<suite id="s1" name="Register New User" source="G:\Robot Framework Commerce Automation\TestCases\register_new_user.robot">
+<test id="s1-t1" name="1_Register a new user" line="10">
 <kw name="Launch browser and launch application" owner="common_keywords">
 <kw name="Load Json From File" owner="JSONLibrary">
-<msg time="2026-06-19T20:55:49.515397" level="INFO">${data} = {'url': 'https://demowebshop.tricentis.com/', 'registration': {'first_name': 'Ram', 'last_name': 'Chig', 'email': 'rc2@robot.com', 'password': 'testme123'}, 'giftcard': {'recipient_name': 'John', 'rec...</msg>
-<var>${data}</var>
-<arg>G:\\Robot Framework Commerce Automation\\Utilities\\testdata.json</arg>
+<msg time="2026-06-20T07:09:37.403693" level="INFO">${lambda_test_details} = {'lambda_test': {'user_name_lt': 'yourcloudtrek', 'access_key_lt': 'LT_DiVo0Qqh1FfEPPjKoOr6qeOMPMagES0tdRcnSp78JLBoSog'}, 'url': 'https://demowebshop.tricentis.com/', 'registration': {'first_name': 'R...</msg>
+<var>${lambda_test_details}</var>
+<arg>${test_data_file_path}</arg>
 <doc>Load JSON from file.</doc>
-<status status="PASS" start="2026-06-19T20:55:49.508030" elapsed="0.007367"/>
+<status status="PASS" start="2026-06-20T07:09:37.403693" elapsed="0.000000"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-06-19T20:55:49.560177" level="INFO">${url} = https://demowebshop.tricentis.com/</msg>
+<msg time="2026-06-20T07:09:37.403693" level="INFO">${lt_username} = yourcloudtrek</msg>
+<var>${lt_username}</var>
+<arg>${lambda_test_details}[lambda_test][user_name_lt]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-20T07:09:37.403693" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-20T07:09:37.403693" level="INFO">${lt_accesskey} = LT_DiVo0Qqh1FfEPPjKoOr6qeOMPMagES0tdRcnSp78JLBoSog</msg>
+<var>${lt_accesskey}</var>
+<arg>${lambda_test_details}[lambda_test][access_key_lt]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-20T07:09:37.403693" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-20T07:09:37.403693" level="INFO">${remote_rul} = https://yourcloudtrek:LT_DiVo0Qqh1FfEPPjKoOr6qeOMPMagES0tdRcnSp78JLBoSog@hub.lambdatest.com/wd/hub</msg>
+<var>${remote_rul}</var>
+<arg>https://${lt_username}:${lt_accesskey}@hub.lambdatest.com/wd/hub</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-20T07:09:37.403693" elapsed="0.000000"/>
+</kw>
+<kw name="Load Json From File" owner="JSONLibrary">
+<msg time="2026-06-20T07:09:37.403693" level="INFO">${data} = {'lambda_test': {'user_name_lt': 'yourcloudtrek', 'access_key_lt': 'LT_DiVo0Qqh1FfEPPjKoOr6qeOMPMagES0tdRcnSp78JLBoSog'}, 'url': 'https://demowebshop.tricentis.com/', 'registration': {'first_name': 'R...</msg>
+<var>${data}</var>
+<arg>${test_data_file_path}</arg>
+<doc>Load JSON from file.</doc>
+<status status="PASS" start="2026-06-20T07:09:37.403693" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-20T07:09:37.403693" level="INFO">${url} = https://demowebshop.tricentis.com/</msg>
 <var>${url}</var>
 <arg>${data}[url]</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-06-19T20:55:49.559179" elapsed="0.000998"/>
+<status status="PASS" start="2026-06-20T07:09:37.403693" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-06-20T07:09:37.420748" level="INFO">${options} = &lt;selenium.webdriver.firefox.options.Options object at 0x000001D16B896030&gt;</msg>
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].FirefoxOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-06-20T07:09:37.403693" elapsed="0.017055"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2026-06-20T07:09:37.423036" level="INFO">${lt_options} = {'build': 'commerce_1_FF', 'name': 'register_user'}</msg>
+<var>${lt_options}</var>
+<arg>build=commerce_1_FF</arg>
+<arg>name=register_user</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2026-06-20T07:09:37.423036" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>set_capability</arg>
+<arg>LT:Options</arg>
+<arg>${lt_options}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2026-06-20T07:09:37.423036" elapsed="0.001476"/>
 </kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-06-19T20:55:49.573170" level="INFO">Opening browser 'Chrome' to base url 'https://demowebshop.tricentis.com/'.</msg>
+<msg time="2026-06-20T07:09:37.424512" level="INFO">Opening browser 'Firefox' to base url 'https://demowebshop.tricentis.com/' through remote server at 'https://yourcloudtrek:LT_DiVo0Qqh1FfEPPjKoOr6qeOMPMagES0tdRcnSp78JLBoSog@hub.lambdatest.com/wd/hub'.</msg>
+<msg time="2026-06-20T07:09:50.785991" level="INFO">C:\Users\Lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\remote_connection.py:421: UserWarning: Embedding username and password in URL could be insecure, use ClientConfig instead
+  headers = self.get_remote_connection_headers(parsed_url, self._client_config.keep_alive)</msg>
 <arg>${url}</arg>
-<arg>Chrome</arg>
+<arg>Firefox</arg>
+<arg>remote_url=${remote_rul}</arg>
+<arg>options=${options}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-06-19T20:55:49.572169" elapsed="13.165631"/>
+<status status="PASS" start="2026-06-20T07:09:37.424512" elapsed="13.361479"/>
 </kw>
 <kw name="Delete All Cookies" owner="SeleniumLibrary">
 <doc>Deletes all cookies.</doc>
-<status status="PASS" start="2026-06-19T20:56:02.738800" elapsed="1.707559"/>
+<status status="PASS" start="2026-06-20T07:09:50.785991" elapsed="0.261675"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-06-19T20:56:04.446359" elapsed="0.099702"/>
+<status status="PASS" start="2026-06-20T07:09:51.047666" elapsed="0.585811"/>
 </kw>
-<status status="PASS" start="2026-06-19T20:55:49.489526" elapsed="15.056535"/>
+<status status="PASS" start="2026-06-20T07:09:37.403693" elapsed="14.229784"/>
 </kw>
-<kw name="Add apperals and other items to wishlist" owner="apperals_shoes_page_objects">
+<kw name="CLick Register link" owner="homepage_objects">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${apperal_shoes}</arg>
+<arg>${register_link}</arg>
+<arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-06-19T20:56:04.564676" elapsed="0.222620"/>
+<status status="PASS" start="2026-06-20T07:09:51.633477" elapsed="0.546300"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-06-19T20:56:04.787296" level="INFO">Clicking element 'xpath:(//a[contains(text(),'Apparel &amp; Shoes')])[1]'.</msg>
-<arg>${apperal_shoes}</arg>
+<msg time="2026-06-20T07:09:52.179777" level="INFO">Clicking element 'xpath://a[text()='Register']'.</msg>
+<arg>${register_link}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-19T20:56:04.787296" elapsed="1.391290"/>
+<status status="PASS" start="2026-06-20T07:09:52.179777" elapsed="0.847119"/>
+</kw>
+<status status="PASS" start="2026-06-20T07:09:51.633477" elapsed="1.393419"/>
+</kw>
+<kw name="Register the use sucessfully and validate" owner="registrationpage_objects">
+<kw name="Load Json From File" owner="JSONLibrary">
+<msg time="2026-06-20T07:09:53.026896" level="INFO">${json_data} = {'lambda_test': {'user_name_lt': 'yourcloudtrek', 'access_key_lt': 'LT_DiVo0Qqh1FfEPPjKoOr6qeOMPMagES0tdRcnSp78JLBoSog'}, 'url': 'https://demowebshop.tricentis.com/', 'registration': {'first_name': 'R...</msg>
+<var>${json_data}</var>
+<arg>G:\\Robot Framework Commerce Automation\\Utilities\\testdata.json</arg>
+<doc>Load JSON from file.</doc>
+<status status="PASS" start="2026-06-20T07:09:53.026896" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-20T07:09:53.042519" level="INFO">${first_name_data} = Ram</msg>
+<var>${first_name_data}</var>
+<arg>${json_data}[registration][first_name]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-20T07:09:53.042519" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-20T07:09:53.042519" level="INFO">${last_name_data} = Chig</msg>
+<var>${last_name_data}</var>
+<arg>${json_data}[registration][last_name]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-20T07:09:53.042519" elapsed="0.000000"/>
+</kw>
+<kw name="Generate Email" owner="reusables">
+<msg time="2026-06-20T07:09:53.042519" level="INFO">${email_data} = ram3142@robot.com</msg>
+<var>${email_data}</var>
+<status status="PASS" start="2026-06-20T07:09:53.042519" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-20T07:09:53.042519" level="INFO">${password_data} = testme123</msg>
+<var>${password_data}</var>
+<arg>${json_data}[registration][password]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-20T07:09:53.042519" elapsed="0.000000"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${click_frok_image}</arg>
+<arg>${register_banner}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-06-19T20:56:06.180582" elapsed="0.043407"/>
+<status status="PASS" start="2026-06-20T07:09:53.042519" elapsed="0.540193"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-06-19T20:56:06.224988" level="INFO">Clicking element 'xpath://a[contains(text(),'Rockabilly Polka Dot Top')]'.</msg>
-<arg>${click_frok_image}</arg>
+<msg time="2026-06-20T07:09:53.582712" level="INFO">Clicking element 'xpath://input[@id='gender-male']'.</msg>
+<arg>${gender_radio}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-19T20:56:06.224988" elapsed="1.843166"/>
+<status status="PASS" start="2026-06-20T07:09:53.582712" elapsed="0.587219"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${add_to_wishlist}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-06-19T20:56:08.069154" elapsed="0.058156"/>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-20T07:09:54.169931" level="INFO">Typing text 'Ram' into text field 'id:FirstName'.</msg>
+<arg>${first_name}</arg>
+<arg>${first_name_data}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-20T07:09:54.169931" elapsed="0.788142"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-20T07:09:54.958073" level="INFO">Typing text 'Chig' into text field 'id:LastName'.</msg>
+<arg>${last_name}</arg>
+<arg>${last_name_data}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-20T07:09:54.958073" elapsed="0.801855"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-20T07:09:55.759928" level="INFO">Typing text 'ram3142@robot.com' into text field 'id:Email'.</msg>
+<arg>${email}</arg>
+<arg>${email_data}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-20T07:09:55.759928" elapsed="0.790340"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2026-06-20T07:09:56.550268" level="INFO">Typing password into text field 'id:Password'.</msg>
+<msg time="2026-06-20T07:09:57.075736" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${password}</arg>
+<arg>${password_data}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-20T07:09:56.550268" elapsed="0.813383"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2026-06-20T07:09:57.363651" level="INFO">Typing password into text field 'id:ConfirmPassword'.</msg>
+<msg time="2026-06-20T07:09:57.880920" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${confirm_password}</arg>
+<arg>${password_data}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-20T07:09:57.363651" elapsed="0.789827"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2026-06-19T20:56:08.127310" level="INFO">Clicking button 'xpath://input[@id='add-to-wishlist-button-5']'.</msg>
-<arg>${add_to_wishlist}</arg>
+<msg time="2026-06-20T07:09:58.153478" level="INFO">Clicking button 'id:register-button'.</msg>
+<arg>${register_button}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-19T20:56:08.127310" elapsed="0.226171"/>
+<status status="PASS" start="2026-06-20T07:09:58.153478" elapsed="1.408493"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${wish_list_link}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-06-19T20:56:08.353481" elapsed="0.297974"/>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2026-06-20T07:10:00.110018" level="INFO">Element 'xpath://div[@class='page-body']' contains text 'registration completed'.</msg>
+<arg>${confirmation_message}</arg>
+<arg>registration completed</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2026-06-20T07:09:59.561971" elapsed="0.548047"/>
 </kw>
-<kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2026-06-19T20:56:08.652448" level="INFO">Clicking link 'xpath://a[text()='wishlist']'.</msg>
-<arg>${wish_list_link}</arg>
-<doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-19T20:56:08.652448" elapsed="0.762152"/>
-</kw>
-<status status="PASS" start="2026-06-19T20:56:04.561686" elapsed="4.852914"/>
-</kw>
-<kw name="Validate Wishlist title" owner="wishlist_cart_page_objects">
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>xpath://div[@class='page-title']</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2026-06-19T20:56:09.430283" elapsed="0.068060"/>
-</kw>
-<kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2026-06-19T20:56:09.531579" level="INFO">Page title is 'Demo Web Shop. Wishlist'.</msg>
-<arg>Demo Web Shop. Wishlist</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<status status="PASS" start="2026-06-19T20:56:09.498343" elapsed="0.034235"/>
-</kw>
-<status status="PASS" start="2026-06-19T20:56:09.430283" elapsed="0.102295"/>
+<status status="PASS" start="2026-06-20T07:09:53.026896" elapsed="7.083122"/>
 </kw>
 <kw name="Close the browsering session" owner="common_keywords">
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2026-06-19T20:56:09.535574" elapsed="3.016076"/>
+<status status="PASS" start="2026-06-20T07:10:00.110018" elapsed="0.827409"/>
 </kw>
-<status status="PASS" start="2026-06-19T20:56:09.534576" elapsed="3.017074"/>
+<status status="PASS" start="2026-06-20T07:10:00.110018" elapsed="0.827409"/>
 </kw>
-<status status="PASS" start="2026-06-19T20:55:49.489526" elapsed="23.062124"/>
+<status status="PASS" start="2026-06-20T07:09:37.403693" elapsed="23.533734"/>
 </test>
-<status status="PASS" start="2026-06-19T20:55:46.959922" elapsed="25.591728"/>
+<status status="PASS" start="2026-06-20T07:09:36.362678" elapsed="24.574749"/>
 </suite>
 <statistics>
 <total>
@@ -113,7 +220,7 @@
 <tag>
 </tag>
 <suite>
-<stat name="Add Item Wishlist" id="s1" pass="1" fail="0" skip="0">Add Item Wishlist</stat>
+<stat name="Register New User" id="s1" pass="1" fail="0" skip="0">Register New User</stat>
 </suite>
 </statistics>
 <errors>

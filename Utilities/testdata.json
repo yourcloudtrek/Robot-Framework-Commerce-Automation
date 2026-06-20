@@ -1,4 +1,10 @@
 {
+    "lambda_test" : 
+    {
+        "user_name_lt" : "yourcloudtrek",
+        "access_key_lt" : "LT_DiVo0Qqh1FfEPPjKoOr6qeOMPMagES0tdRcnSp78JLBoSog"
+    },
+
     "url":"https://demowebshop.tricentis.com/",
 
     "registration" :

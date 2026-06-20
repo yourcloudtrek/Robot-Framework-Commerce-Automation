@@ -1,0 +1,34 @@
+name: LambdaTest Smoke Test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run-test:
+
+    runs-on: ubuntu-latest
+
+    env:
+      LT_USERNAME: ${{ secrets.LT_USERNAME }}
+      LT_ACCESS_KEY: ${{ secrets.LT_ACCESS_KEY }}
+
+    steps:
+
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Dependencies
+        run: |
+          pip install robotframework
+          pip install robotframework-seleniumlibrary
+          pip install selenium
+          pip install robotframework-jsonlibrary
+
+      - name: Run Robot Test
+        run: |
+          robot TestCases/register_new_user.robot
