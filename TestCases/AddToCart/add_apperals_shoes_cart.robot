@@ -1,8 +1,8 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    ../Resources/homepage_objects.robot
-Resource    ../Resources/apperals_shoes_page_objects.robot
-Resource    ../Utilities/common_keywords.robot
+Resource    ../../Resources/homepage_objects.robot
+Resource    ../../Resources/apperals_shoes_page_objects.robot
+Resource    ../../Utilities/common_keywords.robot
 
 *** Test Cases ***
 8_Add Apperals and Shoes to the cart

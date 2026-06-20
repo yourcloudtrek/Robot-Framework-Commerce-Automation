@@ -1,8 +1,8 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    ../Utilities/common_keywords.robot
-Resource    ../Resources/homepage_objects.robot
-Resource    ../Resources/books_category_page_objects.robot
+Resource    ../../Utilities/common_keywords.robot
+Resource    ../../Resources/homepage_objects.robot
+Resource    ../../Resources/books_category_page_objects.robot
 
 *** Test Cases ***
 6_Add Books items to cart and vaidate

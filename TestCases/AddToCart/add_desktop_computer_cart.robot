@@ -1,8 +1,8 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    ../Resources/homepage_objects.robot
-Resource    ../Resources/computer_category_objects.robot
-Resource    ../Utilities/common_keywords.robot
+Resource    ../../Resources/homepage_objects.robot
+Resource    ../../Resources/computer_category_objects.robot
+Resource    ../../Utilities/common_keywords.robot
 
 *** Test Cases ***
 5_Add desktop computer to the cart
