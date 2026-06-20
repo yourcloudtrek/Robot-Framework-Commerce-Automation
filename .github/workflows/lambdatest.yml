@@ -1,4 +1,4 @@
-name: LambdaTest Smoke Test
+name: LambdaTest Smoke Test add books to cart
 
 on:
   workflow_dispatch:
@@ -31,4 +31,11 @@ jobs:
 
       - name: Run Robot Test
         run: |
-          robot TestCases/register_new_user.robot
+          robot -d Test_Report TestCases/add_books_cart.robot   
+          
+    
+
+      - name: Generate RobotMetrics Report
+        run: |
+          pip install robotframework-metrics
+          robotmetrics -I Test_Report/output.xml          
