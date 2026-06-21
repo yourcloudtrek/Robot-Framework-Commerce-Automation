@@ -17,9 +17,18 @@ Remove items in cart whose amount is less then 20
             Sleep    2s
             
             
-        END
-        
+        END  
     
         
     END
     Click Element    ${update_cart_button}
+
+Select Country, State / Province and Postalcode and checkout
+    Wait Until Element Is Visible    ${select_country_dropdown}    15s
+    Select From List By Label    ${select_country_dropdown}    United States
+    Sleep    2s
+    Select From List By Index    ${select_state_dropdown}    4
+    Input Text    ${postal_code}    12345
+    Click Element    ${terms_conditions_chkbx}
+    Click Button    ${checkout}
+

@@ -59,6 +59,11 @@ shopping_cart_banner = "xpath://h1[text()='Shopping cart']"
 shopping_cart_table = "xpath://table[@class='cart']//tr"
 checkboxes_cart = "xpath://input[@type='checkbox']"
 update_cart_button = "xpath://input[@name='updatecart']"
+select_country_dropdown = "xpath://select[@id='CountryId']"
+select_state_dropdown = "xpath://select[@id='StateProvinceId']"
+postal_code = "xpath://input[@id='ZipPostalCode']"
+terms_conditions_chkbx = "xpath://input[@id='termsofservice']"
+checkout = "xpath://button[@id='checkout']"
 
 
 # page objects of gift card
@@ -67,6 +72,26 @@ recipient_name_gc = "xpath://input[@id='giftcard_1_RecipientName']"
 recipient_email_gc = "xpath://input[@id='giftcard_1_RecipientEmail']"
 sender_name_gc = "xpath://input[@id='giftcard_1_SenderName']"
 sender_email_gc = "xpath://input[@id='giftcard_1_SenderEmail']"
+
+# Page objects of checkout page
+first_name_checkout = "xpath://input[@id='BillingNewAddress_FirstName']"
+last_name_checkout = "xpath://input[@id='BillingNewAddress_LastName']"
+email_checkout = "xpath://input[@id='BillingNewAddress_Email']"
+country_checkout_dropdown = "xpath://select[@id='BillingNewAddress_CountryId']"
+state_province_checkout_dropdonw = "xpath://select[@id='BillingNewAddress_StateProvinceId']"
+city_checkout = "xpath://input[@id='BillingNewAddress_City']"
+address1_checkout = "xpath://input[@id='BillingNewAddress_Address1']"
+zip_postal_checkout = "xpath://input[@id='BillingNewAddress_ZipPostalCode']"
+phone_checkout = "xpath://input[@id='BillingNewAddress_PhoneNumber']"
+continue_button_checkout = "xpath://div[@id='billing-buttons-container']/input[@value='Continue']"
+store_pickup_checkbox_checkout = "xpath://input[@id='PickUpInStore']"
+continue_shipping_checkout = "xpath:(//input[@title='Continue'])[2]"
+continue_payment_checkout = "xpath://input[@class='button-1 payment-method-next-step-button']"
+continue_payment_next_step_checkout = "xpath://input[@class='button-1 payment-info-next-step-button']"
+confirm_order_checkout = "xpath://input[@class='button-1 confirm-order-next-step-button']"
+order_confirmation_message = "xpath://div[@class='title']"
+order_number = "xpath://li[contains(text(),'Order number')]"
+
 
 
 
