@@ -22,6 +22,17 @@
         "recipient_mail" : "john@gc.com",
         "sender_name" : "Krish",
         "sender_email" : "krish@gc.com"
+    },
+
+    "checkout" :
+    {
+        "chk_first_name" : "Krish",
+        "chk_last_name" : "Smith",
+        "chk_city" : "Mumbai",
+        "chk_address" : "106 West Lake road",
+        "chk_zip" : "19898",
+        "chk_phone" : "1234567890"
+
     }
 
 

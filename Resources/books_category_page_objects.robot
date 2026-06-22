@@ -14,6 +14,7 @@ Add all books item to the cart
     END
     Wait Until Element Is Visible    ${shopping_cart_link}
     Click Element    ${shopping_cart_link}
+    Sleep    5s
 
 Add Specific Books to cart based on category
     ${BOOK_NAME} =    List of Books
