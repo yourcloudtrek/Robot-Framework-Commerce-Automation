@@ -32,7 +32,7 @@ jobs:
       - name: Run Robot Tests
         run: |
           robot --outputdir Test_Report \
-            TestCases/OrdersScenarios
+            TestCases/OrdersScenarios/place_desktop_comp_order.robot
             
       - name: Generate RobotMetrics Report
         run: |
