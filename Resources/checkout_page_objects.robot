@@ -35,7 +35,7 @@ Enter shipping and billing details and confirm order
     Click Element    ${continue_shipping_checkout}
     Wait Until Element Is Visible    ${continue_payment_checkout}
     Click Element    ${continue_payment_checkout}
-    Wait Until Element Is Visible    ${continue_payment_next_step_checkout}
+    Wait Until Element Is Visible    ${continue_payment_next_step_checkout}    10s
     Click Element    ${continue_payment_next_step_checkout}
     Wait Until Element Is Visible    ${confirm_order_checkout}
     Click Element    ${confirm_order_checkout}
