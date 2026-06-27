@@ -32,7 +32,7 @@ jobs:
       - name: Run Robot Tests
         run: |
           robot --include sanity \
-          robot --outputdir Test_Report \
+            --outputdir Test_Report \
             TestCases
             
       - name: Generate RobotMetrics Report
