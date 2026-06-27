@@ -36,9 +36,11 @@ jobs:
             TestCases
             
       - name: Generate RobotMetrics Report
+        if: always()
         run: |
           robotmetrics -I Test_Report
       - name: Upload Reports
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: robot-reports
