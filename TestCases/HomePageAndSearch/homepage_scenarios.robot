@@ -1,7 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    ../Utilities/common_keywords.robot
-Resource    ../Resources/homepage_objects.robot
+Resource    ../../Utilities/common_keywords.robot
+Resource    ../../Resources/homepage_objects.robot
 
 Suite Setup    Log To Console    Homepage scenarios start
 Suite Teardown    Log To Console    Homepage scenarios end
