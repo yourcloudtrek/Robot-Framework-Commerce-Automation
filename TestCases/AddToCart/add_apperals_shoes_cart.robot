@@ -6,6 +6,7 @@ Resource    ../../Utilities/common_keywords.robot
 
 *** Test Cases ***
 8_Add Apperals and Shoes to the cart
+    [Tags]    sanity
     Launch browser and launch application
     Add apperals and shoes items to cart
     Remove all items from the shopping cart

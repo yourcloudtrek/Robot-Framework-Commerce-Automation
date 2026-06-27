@@ -11,6 +11,7 @@ Resource    ../../Resources/checkout_page_objects.robot
 *** Test Cases ***    
 2_This test case is to place apperl order
     [Documentation]    This test case is to place apperals order
+    [Tags]    sanity
     Launch browser and launch application
     CLick Register link
     Register the use sucessfully and validate
