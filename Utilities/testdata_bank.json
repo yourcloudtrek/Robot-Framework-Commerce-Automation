@@ -1,0 +1,17 @@
+{
+    "app_url" : "https://parabank.parasoft.com/parabank/index.htm",
+
+    "register_cust" :
+    {
+        "cust_first_name" : "Ram",
+        "cust_last_name" : "Parabank",
+        "cust_address" : "600 office center drive",
+        "cust_city" : "Bangalore",
+        "cust_state" : "KA",
+        "cust_zip" : "568995",
+        "cust_phone" : "0988889898",
+        "cust_ssn" : "9089",
+        "cust_password" :   "Password1234!"
+
+    }
+}

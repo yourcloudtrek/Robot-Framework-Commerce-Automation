@@ -1,525 +1,227 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.2 (Python 3.12.8 on win32)" generated="2026-06-21T20:49:06.048394" rpa="false" schemaversion="5">
-<suite id="s1" name="Place Books Order" source="G:\Robot Framework Commerce - Orders\Robot-Framework-Commerce-Automation\TestCases\OrdersScenarios\place_books_order.robot">
-<test id="s1-t1" name="1_Place Books Order" line="12">
-<kw name="Launch browser and launch application" owner="common_keywords">
+<robot generator="Robot 7.4.2 (Python 3.12.8 on win32)" generated="2026-06-24T23:28:49.609682" rpa="false" schemaversion="5">
+<suite id="s1" name="Parabank Register User" source="E:\Robot Framework Commerce - PaymentBank\Robot-Framework-Commerce-Automation\TestCases\Parabank\parabank_register_user.robot">
+<test id="s1-t1" name="1_Parabank_Register user" line="9">
+<kw name="Parabank Launch Application" owner="common_keywords">
 <kw name="Load Json From File" owner="JSONLibrary">
-<msg time="2026-06-21T20:49:07.059661" level="INFO">${lambda_test_details} = {'lambda_test': {'user_name_lt': 'yourcloudtrek', 'access_key_lt': 'LT_DiVo0Qqh1FfEPPjKoOr6qeOMPMagES0tdRcnSp78JLBoSog'}, 'url': 'https://demowebshop.tricentis.com/', 'registration': {'first_name': 'R...</msg>
-<var>${lambda_test_details}</var>
-<arg>${test_data_file_path}</arg>
+<msg time="2026-06-24T23:28:53.078894" level="INFO">${bank_data} = {'app_url': 'https://parabank.parasoft.com/parabank/index.htm', 'register_cust': {'cust_first_name': 'Ram', 'cust_last_name': 'Parabank', 'cust_address': '600 office center drive', 'cust_city': 'Banga...</msg>
+<var>${bank_data}</var>
+<arg>${test_data_file_path_parabank}</arg>
 <doc>Load JSON from file.</doc>
-<status status="PASS" start="2026-06-21T20:49:07.058665" elapsed="0.001995"/>
-</kw>
-<kw name="Load Json From File" owner="JSONLibrary">
-<msg time="2026-06-21T20:49:07.062263" level="INFO">${data} = {'lambda_test': {'user_name_lt': 'yourcloudtrek', 'access_key_lt': 'LT_DiVo0Qqh1FfEPPjKoOr6qeOMPMagES0tdRcnSp78JLBoSog'}, 'url': 'https://demowebshop.tricentis.com/', 'registration': {'first_name': 'R...</msg>
-<var>${data}</var>
-<arg>${test_data_file_path}</arg>
-<doc>Load JSON from file.</doc>
-<status status="PASS" start="2026-06-21T20:49:07.060958" elapsed="0.001305"/>
+<status status="PASS" start="2026-06-24T23:28:53.074877" elapsed="0.004017"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-06-21T20:49:07.064263" level="INFO">${url} = https://demowebshop.tricentis.com/</msg>
-<var>${url}</var>
-<arg>${data}[url]</arg>
+<msg time="2026-06-24T23:28:53.082102" level="INFO">${bank_app_url} = https://parabank.parasoft.com/parabank/index.htm</msg>
+<var>${bank_app_url}</var>
+<arg>${bank_data}[app_url]</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-06-21T20:49:07.063264" elapsed="0.000999"/>
+<status status="PASS" start="2026-06-24T23:28:53.079772" elapsed="0.002330"/>
 </kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-06-21T20:49:07.065261" level="INFO">Opening browser 'Chrome' to base url 'https://demowebshop.tricentis.com/'.</msg>
-<arg>${url}</arg>
-<arg>browser=Chrome</arg>
+<msg time="2026-06-24T23:28:53.083103" level="INFO">Opening browser 'Chrome' to base url 'https://parabank.parasoft.com/parabank/index.htm'.</msg>
+<arg>${bank_app_url}</arg>
+<arg>Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-06-21T20:49:07.064263" elapsed="7.860576"/>
-</kw>
-<kw name="Delete All Cookies" owner="SeleniumLibrary">
-<doc>Deletes all cookies.</doc>
-<status status="PASS" start="2026-06-21T20:49:14.924839" elapsed="1.250262"/>
+<status status="PASS" start="2026-06-24T23:28:53.083103" elapsed="15.316414"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-06-21T20:49:16.175101" elapsed="0.109774"/>
+<status status="PASS" start="2026-06-24T23:29:08.400520" elapsed="0.060798"/>
 </kw>
-<status status="PASS" start="2026-06-21T20:49:07.041837" elapsed="9.243038"/>
+<status status="PASS" start="2026-06-24T23:28:53.059249" elapsed="15.403074"/>
 </kw>
-<kw name="CLick Register link" owner="homepage_objects">
+<kw name="Click Register Link on homepage" owner="parabank_homepage_objects">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${register_link}</arg>
-<arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-06-21T20:49:16.287881" elapsed="0.108526"/>
+<status status="PASS" start="2026-06-24T23:29:08.467470" elapsed="0.094458"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-06-21T20:49:16.396407" level="INFO">Clicking element 'xpath://a[text()='Register']'.</msg>
+<msg time="2026-06-24T23:29:08.561928" level="INFO">Clicking element 'xpath://a[text()='Register']'.</msg>
 <arg>${register_link}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-21T20:49:16.396407" elapsed="1.067931"/>
+<status status="PASS" start="2026-06-24T23:29:08.561928" elapsed="1.461472"/>
 </kw>
-<status status="PASS" start="2026-06-21T20:49:16.286874" elapsed="1.177464"/>
+<status status="PASS" start="2026-06-24T23:29:08.466470" elapsed="1.557935"/>
 </kw>
-<kw name="Register the use sucessfully and validate" owner="registrationpage_objects">
+<kw name="Register the user and Validate" owner="parabank_registerpage_objects">
 <kw name="Load Json From File" owner="JSONLibrary">
-<msg time="2026-06-21T20:49:17.467337" level="INFO">${json_data} = {'lambda_test': {'user_name_lt': 'yourcloudtrek', 'access_key_lt': 'LT_DiVo0Qqh1FfEPPjKoOr6qeOMPMagES0tdRcnSp78JLBoSog'}, 'url': 'https://demowebshop.tricentis.com/', 'registration': {'first_name': 'R...</msg>
-<var>${json_data}</var>
-<arg>Utilities/testdata.json</arg>
+<msg time="2026-06-24T23:29:10.035717" level="INFO">${parabank_data} = {'app_url': 'https://parabank.parasoft.com/parabank/index.htm', 'register_cust': {'cust_first_name': 'Ram', 'cust_last_name': 'Parabank', 'cust_address': '600 office center drive', 'cust_city': 'Banga...</msg>
+<var>${parabank_data}</var>
+<arg>Utilities/testdata_bank.json</arg>
 <doc>Load JSON from file.</doc>
-<status status="PASS" start="2026-06-21T20:49:17.466339" elapsed="0.000998"/>
+<status status="PASS" start="2026-06-24T23:29:10.033720" elapsed="0.003010"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-06-21T20:49:17.469335" level="INFO">${first_name_data} = Ram</msg>
-<var>${first_name_data}</var>
-<arg>${json_data}[registration][first_name]</arg>
+<msg time="2026-06-24T23:29:10.039715" level="INFO">${user_fn} = Ram</msg>
+<var>${user_fn}</var>
+<arg>${parabank_data}[register_cust][cust_first_name]</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-06-21T20:49:17.468337" elapsed="0.000998"/>
+<status status="PASS" start="2026-06-24T23:29:10.037716" elapsed="0.001999"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-06-21T20:49:17.470335" level="INFO">${last_name_data} = Chig</msg>
-<var>${last_name_data}</var>
-<arg>${json_data}[registration][last_name]</arg>
+<msg time="2026-06-24T23:29:10.041713" level="INFO">${user_ln} = Parabank</msg>
+<var>${user_ln}</var>
+<arg>${parabank_data}[register_cust][cust_last_name]</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-06-21T20:49:17.469335" elapsed="0.001000"/>
-</kw>
-<kw name="Generate Email" owner="reusables">
-<msg time="2026-06-21T20:49:17.471334" level="INFO">${email_data} = ram2662@robot.com</msg>
-<var>${email_data}</var>
-<status status="PASS" start="2026-06-21T20:49:17.470335" elapsed="0.000999"/>
+<status status="PASS" start="2026-06-24T23:29:10.040713" elapsed="0.001000"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-06-21T20:49:17.472334" level="INFO">${password_data} = testme123</msg>
-<var>${password_data}</var>
-<arg>${json_data}[registration][password]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-06-21T20:49:17.471334" elapsed="0.001000"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${register_banner}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-06-21T20:49:17.472334" elapsed="0.066836"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-06-21T20:49:17.540170" level="INFO">Clicking element 'xpath://input[@id='gender-male']'.</msg>
-<arg>${gender_radio}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-21T20:49:17.540170" elapsed="0.157985"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-06-21T20:49:17.698155" level="INFO">Typing text 'Ram' into text field 'id:FirstName'.</msg>
-<arg>${first_name}</arg>
-<arg>${first_name_data}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-21T20:49:17.698155" elapsed="0.213816"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-06-21T20:49:17.912972" level="INFO">Typing text 'Chig' into text field 'id:LastName'.</msg>
-<arg>${last_name}</arg>
-<arg>${last_name_data}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-21T20:49:17.911971" elapsed="0.164253"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-06-21T20:49:18.076224" level="INFO">Typing text 'ram2662@robot.com' into text field 'id:Email'.</msg>
-<arg>${email}</arg>
-<arg>${email_data}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-21T20:49:18.076224" elapsed="0.204177"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2026-06-21T20:49:18.280401" level="INFO">Typing password into text field 'id:Password'.</msg>
-<msg time="2026-06-21T20:49:18.357906" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>${password}</arg>
-<arg>${password_data}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-21T20:49:18.280401" elapsed="0.273911"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2026-06-21T20:49:18.555311" level="INFO">Typing password into text field 'id:ConfirmPassword'.</msg>
-<msg time="2026-06-21T20:49:18.624994" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>${confirm_password}</arg>
-<arg>${password_data}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-21T20:49:18.554312" elapsed="0.187591"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2026-06-21T20:49:18.741903" level="INFO">Clicking button 'id:register-button'.</msg>
-<arg>${register_button}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-21T20:49:18.741903" elapsed="1.590620"/>
-</kw>
-<kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2026-06-21T20:49:20.391645" level="INFO">Element 'xpath://div[@class='page-body']' contains text 'registration completed'.</msg>
-<arg>${confirmation_message}</arg>
-<arg>registration completed</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2026-06-21T20:49:20.332523" elapsed="0.059122"/>
-</kw>
-<status status="PASS" start="2026-06-21T20:49:17.465338" elapsed="2.926307"/>
-</kw>
-<kw name="Books link from category section" owner="homepage_objects">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${books_link}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-06-21T20:49:20.391645" elapsed="0.052976"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-06-21T20:49:20.446619" level="INFO">Clicking element 'xpath:(//a[contains(text(),'Books')])[3]'.</msg>
-<arg>${books_link}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-21T20:49:20.445620" elapsed="1.046285"/>
-</kw>
-<status status="PASS" start="2026-06-21T20:49:20.391645" elapsed="1.100260"/>
-</kw>
-<kw name="Add all books item to the cart" owner="books_category_page_objects">
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2026-06-21T20:49:21.526476" level="INFO">${add_to_cart} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="4cc2cbcaf683bad13bfe88ca58ac8a70", element="f.38C55EDF692CC720E9E45B10508CD586.d.EB460DD6C8FF1FC69C14CADCD426DDCD.e.170")&gt;, &lt;selenium.webdri...</msg>
-<var>${add_to_cart}</var>
-<arg>${books_add_to_cart}</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2026-06-21T20:49:21.491905" elapsed="0.034571"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-06-21T20:49:21.526476" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="4cc2cbcaf683bad13bfe88ca58ac8a70", element="f.38C55EDF692CC720E9E45B10508CD586.d.EB460DD6C8FF1FC69C14CADCD426DDCD.e.170")&gt;'.</msg>
-<arg>${item}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-21T20:49:21.526476" elapsed="0.131610"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-06-21T20:49:22.658594" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-06-21T20:49:21.658086" elapsed="1.000508"/>
-</kw>
-<var name="${item}">&lt;selenium.webdriver.remote.webelement.WebElement (session="4cc2cbcaf683bad13bfe88ca58ac8a70", element="f.38C55EDF692CC720E9E45B10508CD586.d.EB460DD6C8FF1FC69C14CADCD426DDCD.e.170")&gt;</var>
-<status status="PASS" start="2026-06-21T20:49:21.526476" elapsed="1.132118"/>
-</iter>
-<iter>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-06-21T20:49:22.658594" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="4cc2cbcaf683bad13bfe88ca58ac8a70", element="f.38C55EDF692CC720E9E45B10508CD586.d.EB460DD6C8FF1FC69C14CADCD426DDCD.e.171")&gt;'.</msg>
-<arg>${item}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-21T20:49:22.658594" elapsed="0.099990"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-06-21T20:49:23.758747" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-06-21T20:49:22.758584" elapsed="1.000163"/>
-</kw>
-<var name="${item}">&lt;selenium.webdriver.remote.webelement.WebElement (session="4cc2cbcaf683bad13bfe88ca58ac8a70", element="f.38C55EDF692CC720E9E45B10508CD586.d.EB460DD6C8FF1FC69C14CADCD426DDCD.e.171")&gt;</var>
-<status status="PASS" start="2026-06-21T20:49:22.658594" elapsed="1.100153"/>
-</iter>
-<iter>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-06-21T20:49:23.758747" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="4cc2cbcaf683bad13bfe88ca58ac8a70", element="f.38C55EDF692CC720E9E45B10508CD586.d.EB460DD6C8FF1FC69C14CADCD426DDCD.e.172")&gt;'.</msg>
-<arg>${item}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-21T20:49:23.758747" elapsed="0.103305"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-06-21T20:49:24.863392" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-06-21T20:49:23.862052" elapsed="1.001340"/>
-</kw>
-<var name="${item}">&lt;selenium.webdriver.remote.webelement.WebElement (session="4cc2cbcaf683bad13bfe88ca58ac8a70", element="f.38C55EDF692CC720E9E45B10508CD586.d.EB460DD6C8FF1FC69C14CADCD426DDCD.e.172")&gt;</var>
-<status status="PASS" start="2026-06-21T20:49:23.758747" elapsed="1.104645"/>
-</iter>
-<var>${item}</var>
-<value>@{add_to_cart}</value>
-<status status="PASS" start="2026-06-21T20:49:21.526476" elapsed="3.336916"/>
-</for>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${shopping_cart_link}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-06-21T20:49:24.863392" elapsed="0.031255"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-06-21T20:49:24.894647" level="INFO">Clicking element 'xpath://a[text()='shopping cart']'.</msg>
-<arg>${shopping_cart_link}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-21T20:49:24.894647" elapsed="0.797701"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-06-21T20:49:30.695009" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-06-21T20:49:25.693346" elapsed="5.001663"/>
-</kw>
-<status status="PASS" start="2026-06-21T20:49:21.491905" elapsed="9.203104"/>
-</kw>
-<kw name="Select Country, State / Province and Postalcode and checkout" owner="shopping_cart_page_objects">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${select_country_dropdown}</arg>
-<arg>15s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-06-21T20:49:30.710643" elapsed="0.230191"/>
-</kw>
-<kw name="Select From List By Label" owner="SeleniumLibrary">
-<msg time="2026-06-21T20:49:30.940834" level="INFO">Selecting options from selection list 'xpath://select[@id='CountryId']' by label United States.</msg>
-<arg>${select_country_dropdown}</arg>
-<arg>United States</arg>
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<status status="PASS" start="2026-06-21T20:49:30.940834" elapsed="0.424895"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-06-21T20:49:33.365912" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-06-21T20:49:31.365729" elapsed="2.000183"/>
-</kw>
-<kw name="Select From List By Index" owner="SeleniumLibrary">
-<msg time="2026-06-21T20:49:33.365912" level="INFO">Selecting options from selection list 'xpath://select[@id='StateProvinceId']' by index 4.</msg>
-<arg>${select_state_dropdown}</arg>
-<arg>4</arg>
-<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
-<status status="PASS" start="2026-06-21T20:49:33.365912" elapsed="0.746511"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-06-21T20:49:34.112423" level="INFO">Typing text '12345' into text field 'xpath://input[@id='ZipPostalCode']'.</msg>
-<arg>${postal_code}</arg>
-<arg>12345</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-21T20:49:34.112423" elapsed="0.205326"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-06-21T20:49:34.329990" level="INFO">Clicking element 'xpath://input[@id='termsofservice']'.</msg>
-<arg>${terms_conditions_chkbx}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-21T20:49:34.328990" elapsed="0.242594"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2026-06-21T20:49:34.571584" level="INFO">Clicking button 'xpath://button[@id='checkout']'.</msg>
-<arg>${checkout}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-21T20:49:34.571584" elapsed="2.091946"/>
-</kw>
-<status status="PASS" start="2026-06-21T20:49:30.710643" elapsed="5.952887"/>
-</kw>
-<kw name="Enter shipping and billing details and confirm order" owner="checkout_page_objects">
-<kw name="Load Json From File" owner="JSONLibrary">
-<msg time="2026-06-21T20:49:36.679182" level="INFO">${checkout_data} = {'lambda_test': {'user_name_lt': 'yourcloudtrek', 'access_key_lt': 'LT_DiVo0Qqh1FfEPPjKoOr6qeOMPMagES0tdRcnSp78JLBoSog'}, 'url': 'https://demowebshop.tricentis.com/', 'registration': {'first_name': 'R...</msg>
-<var>${checkout_data}</var>
-<arg>Utilities/testdata.json</arg>
-<doc>Load JSON from file.</doc>
-<status status="PASS" start="2026-06-21T20:49:36.663530" elapsed="0.015652"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-06-21T20:49:36.679182" level="INFO">${user_first_name} = Krish</msg>
-<var>${user_first_name}</var>
-<arg>${checkout_data}[checkout][chk_first_name]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-06-21T20:49:36.679182" elapsed="0.000000"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-06-21T20:49:36.679182" level="INFO">${user_last_name} = Smith</msg>
-<var>${user_last_name}</var>
-<arg>${checkout_data}[checkout][chk_last_name]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-06-21T20:49:36.679182" elapsed="0.000000"/>
-</kw>
-<kw name="Generate Email" owner="reusables">
-<msg time="2026-06-21T20:49:36.679182" level="INFO">${user_email} = ram6004@robot.com</msg>
-<var>${user_email}</var>
-<status status="PASS" start="2026-06-21T20:49:36.679182" elapsed="0.000000"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-06-21T20:49:36.679182" level="INFO">${user_city} = Mumbai</msg>
-<var>${user_city}</var>
-<arg>${checkout_data}[checkout][chk_city]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-06-21T20:49:36.679182" elapsed="0.000000"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-06-21T20:49:36.679182" level="INFO">${user_address} = 106 West Lake road</msg>
+<msg time="2026-06-24T23:29:10.044714" level="INFO">${user_address} = 600 office center drive</msg>
 <var>${user_address}</var>
-<arg>${checkout_data}[checkout][chk_address]</arg>
+<arg>${parabank_data}[register_cust][cust_address]</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-06-21T20:49:36.679182" elapsed="0.000000"/>
+<status status="PASS" start="2026-06-24T23:29:10.042827" elapsed="0.001887"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-06-21T20:49:36.679182" level="INFO">${user_zip} = 19898</msg>
+<msg time="2026-06-24T23:29:10.049094" level="INFO">${user_city} = Bangalore</msg>
+<var>${user_city}</var>
+<arg>${parabank_data}[register_cust][cust_city]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-24T23:29:10.045712" elapsed="0.003382"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-24T23:29:10.051089" level="INFO">${user_state} = KA</msg>
+<var>${user_state}</var>
+<arg>${parabank_data}[register_cust][cust_state]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-24T23:29:10.049094" elapsed="0.001995"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-24T23:29:10.053087" level="INFO">${user_zip} = 568995</msg>
 <var>${user_zip}</var>
-<arg>${checkout_data}[checkout][chk_zip]</arg>
+<arg>${parabank_data}[register_cust][cust_zip]</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-06-21T20:49:36.679182" elapsed="0.000000"/>
+<status status="PASS" start="2026-06-24T23:29:10.051089" elapsed="0.001998"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-06-21T20:49:36.679182" level="INFO">${user_phone} = 1234567890</msg>
+<msg time="2026-06-24T23:29:10.055086" level="INFO">${user_phone} = 0988889898</msg>
 <var>${user_phone}</var>
-<arg>${checkout_data}[checkout][chk_phone]</arg>
+<arg>${parabank_data}[register_cust][cust_phone]</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-06-21T20:49:36.679182" elapsed="0.000000"/>
+<status status="PASS" start="2026-06-24T23:29:10.053087" elapsed="0.001999"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath=//div[@class='page-title']</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-06-21T20:49:36.679182" elapsed="0.073358"/>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-24T23:29:10.056085" level="INFO">${user_ssn} = 9089</msg>
+<var>${user_ssn}</var>
+<arg>${parabank_data}[register_cust][cust_ssn]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-24T23:29:10.055086" elapsed="0.002001"/>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-06-21T20:49:36.754539" level="INFO">Typing text 'Krish' into text field 'xpath://input[@id='BillingNewAddress_FirstName']'.</msg>
-<arg>${first_name_checkout}</arg>
-<arg>${user_first_name}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-21T20:49:36.753540" elapsed="0.263108"/>
+<kw name="Generate Email" owner="reusables">
+<msg time="2026-06-24T23:29:10.057087" level="INFO">${user_name_email} = ram9988@robot.com</msg>
+<var>${user_name_email}</var>
+<status status="PASS" start="2026-06-24T23:29:10.057087" elapsed="0.000995"/>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-06-21T20:49:37.016648" level="INFO">Typing text 'Smith' into text field 'xpath://input[@id='BillingNewAddress_LastName']'.</msg>
-<arg>${last_name_checkout}</arg>
-<arg>${user_last_name}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-21T20:49:37.016648" elapsed="0.217034"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-06-21T20:49:37.233682" level="INFO">Typing text 'ram6004@robot.com' into text field 'xpath://input[@id='BillingNewAddress_Email']'.</msg>
-<arg>${email_checkout}</arg>
-<arg>${user_email}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-21T20:49:37.233682" elapsed="0.304424"/>
-</kw>
-<kw name="Select From List By Label" owner="SeleniumLibrary">
-<msg time="2026-06-21T20:49:37.544257" level="INFO">Selecting options from selection list 'xpath://select[@id='BillingNewAddress_CountryId']' by label United States.</msg>
-<arg>${country_checkout_dropdown}</arg>
-<arg>United States</arg>
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<status status="PASS" start="2026-06-21T20:49:37.538106" elapsed="0.210773"/>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-24T23:29:10.061719" level="INFO">${user_password} = Password1234!</msg>
+<var>${user_password}</var>
+<arg>${parabank_data}[register_cust][cust_password]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-24T23:29:10.058082" elapsed="0.004624"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-06-21T20:49:39.749270" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
+<msg time="2026-06-24T23:29:13.064897" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-06-21T20:49:37.748879" elapsed="2.000391"/>
-</kw>
-<kw name="Select From List By Index" owner="SeleniumLibrary">
-<msg time="2026-06-21T20:49:39.749270" level="INFO">Selecting options from selection list 'xpath://select[@id='BillingNewAddress_StateProvinceId']' by index 2.</msg>
-<arg>${state_province_checkout_dropdonw}</arg>
-<arg>2</arg>
-<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
-<status status="PASS" start="2026-06-21T20:49:39.749270" elapsed="0.178017"/>
+<status status="PASS" start="2026-06-24T23:29:10.063703" elapsed="3.001194"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-06-21T20:49:39.927287" level="INFO">Typing text 'Mumbai' into text field 'xpath://input[@id='BillingNewAddress_City']'.</msg>
-<arg>${city_checkout}</arg>
-<arg>${user_city}</arg>
+<msg time="2026-06-24T23:29:13.064897" level="INFO">Typing text 'Ram' into text field 'xpath://input[@id='customer.firstName']'.</msg>
+<arg>${para_first_name}</arg>
+<arg>${user_fn}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-21T20:49:39.927287" elapsed="0.207121"/>
+<status status="PASS" start="2026-06-24T23:29:13.064897" elapsed="0.363499"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-06-21T20:49:40.134408" level="INFO">Typing text '106 West Lake road' into text field 'xpath://input[@id='BillingNewAddress_Address1']'.</msg>
-<arg>${address1_checkout}</arg>
+<msg time="2026-06-24T23:29:13.430394" level="INFO">Typing text 'Parabank' into text field 'xpath://input[@id='customer.lastName']'.</msg>
+<arg>${para_last_name}</arg>
+<arg>${user_ln}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-24T23:29:13.429395" elapsed="0.166759"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-24T23:29:13.596154" level="INFO">Typing text '600 office center drive' into text field 'xpath://input[@id='customer.address.street']'.</msg>
+<arg>${para_address}</arg>
 <arg>${user_address}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-21T20:49:40.134408" elapsed="0.275666"/>
+<status status="PASS" start="2026-06-24T23:29:13.596154" elapsed="0.231945"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-06-21T20:49:40.412075" level="INFO">Typing text '19898' into text field 'xpath://input[@id='BillingNewAddress_ZipPostalCode']'.</msg>
-<arg>${zip_postal_checkout}</arg>
+<msg time="2026-06-24T23:29:13.828099" level="INFO">Typing text 'Bangalore' into text field 'xpath://input[@id='customer.address.city']'.</msg>
+<arg>${para_city}</arg>
+<arg>${user_city}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-24T23:29:13.828099" elapsed="0.167013"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-24T23:29:13.995112" level="INFO">Typing text 'KA' into text field 'xpath://input[@id='customer.address.state']'.</msg>
+<arg>${para_state}</arg>
+<arg>${user_state}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-24T23:29:13.995112" elapsed="0.165003"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-24T23:29:14.160115" level="INFO">Typing text '568995' into text field 'xpath://input[@id='customer.address.zipCode']'.</msg>
+<arg>${para_zip_code}</arg>
 <arg>${user_zip}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-21T20:49:40.410074" elapsed="0.281468"/>
+<status status="PASS" start="2026-06-24T23:29:14.160115" elapsed="0.169455"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-06-21T20:49:40.691542" level="INFO">Typing text '1234567890' into text field 'xpath://input[@id='BillingNewAddress_PhoneNumber']'.</msg>
-<arg>${phone_checkout}</arg>
+<msg time="2026-06-24T23:29:14.329570" level="INFO">Typing text '0988889898' into text field 'xpath://input[@id='customer.phoneNumber']'.</msg>
+<arg>${para_phone_number}</arg>
 <arg>${user_phone}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-21T20:49:40.691542" elapsed="0.234493"/>
+<status status="PASS" start="2026-06-24T23:29:14.329570" elapsed="0.213705"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${continue_button_checkout}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-06-21T20:49:40.927034" elapsed="0.047549"/>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-24T23:29:14.543275" level="INFO">Typing text '9089' into text field 'xpath://input[@id='customer.ssn']'.</msg>
+<arg>${para_ssn}</arg>
+<arg>${user_ssn}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-24T23:29:14.543275" elapsed="0.164290"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-06-21T20:49:40.974583" level="INFO">Clicking element 'xpath://div[@id='billing-buttons-container']/input[@value='Continue']'.</msg>
-<arg>${continue_button_checkout}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-21T20:49:40.974583" elapsed="0.163603"/>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-24T23:29:14.724323" level="INFO">Typing text 'ram9988@robot.com' into text field 'xpath://input[@id='customer.username']'.</msg>
+<arg>${para_username_email}</arg>
+<arg>${user_name_email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-24T23:29:14.707565" elapsed="0.232125"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${store_pickup_checkbox_checkout}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-06-21T20:49:41.138186" elapsed="1.117977"/>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-24T23:29:14.939690" level="INFO">Typing text 'Password1234!' into text field 'xpath://input[@id='customer.password']'.</msg>
+<arg>${para_password}</arg>
+<arg>${user_password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-24T23:29:14.939690" elapsed="0.202439"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-06-21T20:49:42.256163" level="INFO">Clicking element 'xpath://input[@id='PickUpInStore']'.</msg>
-<arg>${store_pickup_checkbox_checkout}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-21T20:49:42.256163" elapsed="0.173093"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${continue_shipping_checkout}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-06-21T20:49:42.429256" elapsed="0.033925"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-06-21T20:49:42.464180" level="INFO">Clicking element 'xpath:(//input[@title='Continue'])[2]'.</msg>
-<arg>${continue_shipping_checkout}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-21T20:49:42.463181" elapsed="0.212539"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${continue_payment_checkout}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-06-21T20:49:42.675720" elapsed="0.279928"/>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-24T23:29:15.144131" level="INFO">Typing text 'Password1234!' into text field 'xpath://input[@id='repeatedPassword']'.</msg>
+<arg>${para_confirm_password}</arg>
+<arg>${user_password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-24T23:29:15.143129" elapsed="0.198229"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-06-21T20:49:42.955648" level="INFO">Clicking element 'xpath://input[@class='button-1 payment-method-next-step-button']'.</msg>
-<arg>${continue_payment_checkout}</arg>
+<msg time="2026-06-24T23:29:15.342354" level="INFO">Clicking element 'xpath://input[@value='Register']'.</msg>
+<arg>${para_register_button}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-21T20:49:42.955648" elapsed="0.125909"/>
+<status status="PASS" start="2026-06-24T23:29:15.341358" elapsed="0.457373"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${continue_payment_next_step_checkout}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-06-21T20:49:43.081557" elapsed="0.307798"/>
+<status status="PASS" start="2026-06-24T23:29:10.032720" elapsed="5.767015"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-06-21T20:49:43.389355" level="INFO">Clicking element 'xpath://input[@class='button-1 payment-info-next-step-button']'.</msg>
-<arg>${continue_payment_next_step_checkout}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-21T20:49:43.389355" elapsed="0.109872"/>
+<kw name="Close the browsering session" owner="common_keywords">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-06-24T23:29:15.803144" elapsed="2.733963"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${confirm_order_checkout}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-06-21T20:49:43.499227" elapsed="0.279468"/>
+<status status="PASS" start="2026-06-24T23:29:15.801230" elapsed="2.735877"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-06-21T20:49:43.779693" level="INFO">Clicking element 'xpath://input[@class='button-1 confirm-order-next-step-button']'.</msg>
-<arg>${confirm_order_checkout}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-21T20:49:43.778695" elapsed="0.128847"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${order_confirmation_message}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-06-21T20:49:43.907542" elapsed="1.382230"/>
-</kw>
-<kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2026-06-21T20:49:45.323147" level="INFO">Element 'xpath://div[@class='title']' contains text 'been successfully processed'.</msg>
-<arg>${order_confirmation_message}</arg>
-<arg>been successfully processed</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2026-06-21T20:49:45.289772" elapsed="0.033375"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-06-21T20:49:45.355594" level="INFO">${order_no} = Order number: 2331892</msg>
-<var>${order_no}</var>
-<arg>${order_number}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-21T20:49:45.323147" elapsed="0.032447"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>The order No is ${order_no}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-06-21T20:49:45.355594" elapsed="0.000000"/>
-</kw>
-<status status="PASS" start="2026-06-21T20:49:36.663530" elapsed="8.692064"/>
-</kw>
-<doc>This test case is to place all books order</doc>
-<status status="PASS" start="2026-06-21T20:49:07.041837" elapsed="38.313757"/>
+<doc>Parabank user registers</doc>
+<status status="PASS" start="2026-06-24T23:28:53.059249" elapsed="25.478287"/>
 </test>
-<status status="PASS" start="2026-06-21T20:49:06.048394" elapsed="39.322155"/>
+<status status="PASS" start="2026-06-24T23:28:49.609682" elapsed="28.927854"/>
 </suite>
 <statistics>
 <total>
@@ -528,7 +230,7 @@
 <tag>
 </tag>
 <suite>
-<stat name="Place Books Order" id="s1" pass="1" fail="0" skip="0">Place Books Order</stat>
+<stat name="Parabank Register User" id="s1" pass="1" fail="0" skip="0">Parabank Register User</stat>
 </suite>
 </statistics>
 <errors>
