@@ -54,21 +54,24 @@ Parabank Launch Application
     # ${lt_username} =    Set Variable    ${lambda_test_details}[lambda_test][user_name_lt]
     # ${lt_accesskey} =    Set Variable    ${lambda_test_details}[lambda_test][access_key_lt]
 
+    ${lt_username} =     Get Environment Variable    LT_USERNAME
+    ${lt_accesskey} =    Get Environment Variable    LT_ACCESSKEY
+
     ${bank_app_url} =    Set Variable    ${bank_data}[app_url]
 
-    # ${remote_rul} =  Set Variable     https://${lt_username}:${lt_accesskey}@hub.lambdatest.com/wd/hub
+    ${remote_rul} =  Set Variable     https://${lt_username}:${lt_accesskey}@hub.lambdatest.com/wd/hub
 
-    # ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
-    # ${lt_options} =     Create Dictionary     
-    # ...    build=parabank-banking
-    # ...    name=parabank-transactions-payment
+    ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
+    ${lt_options} =     Create Dictionary     
+    ...    build=parabank-banking
+    ...    name=parabank-transactions-payment
 
-    # Call Method    ${options}    set_capability    LT:Options    ${lt_options} 
+    Call Method    ${options}    set_capability    LT:Options    ${lt_options} 
 
-    # Open Browser   ${bank_app_url}    Chrome    remote_url=${remote_rul}    options=${options}
+    Open Browser   ${bank_app_url}    Chrome    remote_url=${remote_rul}    options=${options}
 
     
-    Open Browser    ${bank_app_url}    Chrome
+    #Open Browser    ${bank_app_url}    Chrome
     Maximize Browser Window
 
 Close the browsering session
