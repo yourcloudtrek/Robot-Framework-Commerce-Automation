@@ -1,4 +1,4 @@
-name: LambdaTest Smoke Test add books to cart
+name: LambdaTest Smoke Parabank cases
 
 on:
   workflow_dispatch:
